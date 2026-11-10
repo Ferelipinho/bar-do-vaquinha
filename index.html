@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bar do Vaquinha - mercearia e conveniência em Guararapes-SP.">
+  <title>Bar do Vaquinha | Mercearia e conveniência</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir ou fechar menu">☰</button>
+    <a class="brand" href="#" data-page="home">
+      <span class="brand-mark">BV</span>
+      <span><strong>Bar do Vaquinha</strong><small>Mercearia e conveniência</small></span>
+    </a>
+    <button class="header-cart" data-page="cart">Carrinho <span id="headerCartCount">0</span></button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <p class="side-heading">MENU PRINCIPAL</p>
+      <button class="nav-item active" data-page="home">Início</button>
+      <p class="side-heading">CATEGORIAS</p>
+      <button class="nav-item" data-category="Bebidas">Bebidas</button>
+      <button class="nav-item" data-category="Doces">Doces</button>
+      <button class="nav-item" data-category="Salgados">Salgados</button>
+      <div class="side-spacer"></div>
+      <button class="nav-item" data-page="stock">Consultar estoque</button>
+      <button class="nav-item" data-page="cart">Meu carrinho <span class="side-cart-count" id="sideCartCount">0</span></button>
+    </aside>
+
+    <main class="main-content">
+      <section class="page active" id="homePage">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">SEJA BEM-VINDO</span>
+            <h1>Bar do Vaquinha</h1>
+            <p>Qualidade, variedade e bons preços. Confira nossos produtos e escolha o que deseja comprar.</p>
+            <button class="primary-button" data-page="products">Ver produtos</button>
+          </div>
+          <div class="hero-mark" aria-hidden="true">BV</div>
+        </div>
+
+        <section class="section-block">
+          <div class="section-title">
+            <div><span class="eyebrow">PLANEJE SUA VISITA</span><h2>Nosso funcionamento</h2></div>
+            <p>Confira nossos horários antes de visitar a loja.</p>
+          </div>
+          <div class="hours-grid">
+            <article class="info-card"><span class="info-label">PRIMEIRO HORÁRIO</span><h3>08:00 às 14:00</h3><p>Período da manhã e início da tarde.</p></article>
+            <article class="info-card"><span class="info-label">SEGUNDO HORÁRIO</span><h3>18:00 às 21:30</h3><p>Período da noite.</p></article>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-title"><div><span class="eyebrow">ESCOLHA SUA CATEGORIA</span><h2>Conheça nossos produtos</h2></div></div>
+          <div class="category-grid">
+            <button class="category-card drinks" data-category="Bebidas"><span class="category-symbol">B</span><strong>Bebidas</strong><small>Refresque seu dia</small></button>
+            <button class="category-card sweets" data-category="Doces"><span class="category-symbol">D</span><strong>Doces</strong><small>Um toque de doçura</small></button>
+            <button class="category-card snacks" data-category="Salgados"><span class="category-symbol">S</span><strong>Salgados</strong><small>Opções para beliscar</small></button>
+          </div>
+        </section>
+
+        <section class="notice-grid">
+          <article class="notice-card"><h3>Retirada na loja</h3><p>Não realizamos entregas. Os produtos devem ser retirados presencialmente.</p></article>
+          <article class="notice-card"><h3>Pagamento</h3><p>O pagamento é realizado presencialmente na loja, antes da retirada.</p></article>
+          <article class="notice-card"><h3>Informação importante</h3><p>Não trabalhamos com vendas fiadas.</p></article>
+        </section>
+      </section>
+
+      <section class="page" id="productsPage">
+        <div class="page-heading"><span class="eyebrow">NOSSA MERCEARIA</span><h1 id="productsTitle">Todos os produtos</h1><p>Encontre seus produtos e adicione ao carrinho.</p></div>
+        <input class="search-input" id="productSearch" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="page" id="stockPage">
+        <div class="page-heading"><span class="eyebrow">CONSULTA</span><h1>Estoque</h1><p>Consulte a quantidade cadastrada de cada produto.</p></div>
+        <div class="stock-tools"><input class="search-input" id="stockSearch" type="search" placeholder="Buscar produto..." aria-label="Buscar produto no estoque">
+          <select id="stockFilter" aria-label="Filtrar estoque"><option value="all">Todos os produtos</option><option value="available">Disponíveis</option><option value="unavailable">Fora de estoque</option></select></div>
+        <div class="stock-list" id="stockList"></div>
+      </section>
+
+      <section class="page" id="cartPage">
+        <div class="page-heading"><span class="eyebrow">SEUS PEDIDOS</span><h1>Meu carrinho</h1><p>Confira os itens selecionados.</p></div>
+        <div class="cart-layout"><div class="cart-items" id="cartItems"></div>
+          <aside class="cart-summary"><h2>Resumo do pedido</h2><div class="summary-line"><span>Itens</span><strong id="cartUnits">0</strong></div><div class="summary-line total"><span>Total estimado</span><strong id="cartTotal">R$ 0,00</strong></div><p>O pagamento é presencial na loja. Esta página não realiza pagamento nem reserva produtos.</p><button class="primary-button full-width" id="checkoutButton">Finalizar consulta</button></aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div><strong>Bar do Vaquinha</strong><p>Mercearia e conveniência</p></div>
+    <div><strong>Endereço</strong><p>Rua José Dalla Pria, 80<br>Guararapes - SP<br>CEP: 16700-000</p></div>
+    <div><strong>Funcionamento</strong><p>08:00 às 14:00<br>18:00 às 21:30</p></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
