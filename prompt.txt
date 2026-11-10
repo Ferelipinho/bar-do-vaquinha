@@ -1,0 +1,25 @@
+Ei chat, preciso que você crie para mim um site para mim em HTML, CSS e JS, para uma mercearia, o nome do estabelecimento é Vaquinha's Bar.
+-Nosso público alvo são pessoas mais velhas, adultos e jovens;
+-Preciso que no site tenha uma barra lateral onde tenha os tipos de alimentos (bebidas, doces, salgados);
+-Preciso que ao clicar nos tipos de alimentos apareça uma tela com os alimentos daquele tipo;
+-Horário em que abre e fecha na página inicial, abre das 8h ás 14h, das 18 ás 21h e 30min;
+-Preciso que os alimentos sejam clicáveis e que tenham o preço, baseado em Guararapes-SP;
+-Preciso que tenha um carrinho onde os alimentos sejam colocados ja somando o valor dos itens adicionados, e com a opção de retirá-los, caso o cliente não o queira mais;
+-Preciso que o site seja bem fácil e intuitivo para o cliente usar;
+-O nome da mercearia é Bar do Vaquinha;
+-Preciso que tenha uma página onde tenha os produtos em etoque, onde o cliente poderá ver se o produto está em estoque ou não, e se não estiver, aparecer uma mensagem na tela dizendo que o produto está fora de estoque;
+-Precisa estar esclarecido na página inicial que o estabelecimento não faz entregas, o cliente precisa retirar na loja, o pagamento deve ser realizado na loja, antes do produto ser retirado e que o estabelecimento não aceita fiado;
+-A quantidade de 1 únio produto que a pessoa pode levar deve ser baseado no estoque;
+-Preciso que me mande o código completo, somente para copiar e colar com HTML, CSS e JS separados;
+-O código não pode ter emotes, nem nos nomes;
+-O site deve ser eniado completo, sem precisar de ajustes ou alterações.
+
+agora deixe tudo alinhado, colorido e cliclavel, deixe bem confortável
+
+me envie o css com a parte ja substituida
+
+o site fica assim
+
+somente no rodapé como já está, sometne adicionar o resto das informações
+
+me de os downloads dos arquivos
